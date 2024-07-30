@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: "${IMAGE_NAME}"
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/scap:latest
   scap:
     needs: build
     permissions:
